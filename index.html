@@ -12,8 +12,45 @@
          This makes it easier to make new pages for your site. -->
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body class=magicpattern>
-    <h1>Programming Perry</h1>
-  
+
+  <body>
+    
+<!-- Menü -->
+    <!-- <nav class="menu">
+      <a href="#index" class="menubutton">Index</a>
+      <a href="#projects" class="menubutton">Projects</a>
+      <a href="#devlog" class="menubutton">Dev_Log</a>
+    </nav>-->
+    <div class="tabs">
+      <button class="tablink" onclick="openPage('Index', this, 'red')">Index</button>
+      <button class="tablink" onclick="openPage('Projects', this, 'green')" id="defaultOpen">Projects</button>
+      <button class="tablink" onclick="openPage('Dev_Log', this, 'blue')">Dev_Log</button>
+    </div>
+    <div id="Index" class="tabcontent">
+      <h3>Index</h3>
+      <p>Index gedöns</p>
+    </div>
+
+    <div id="Projects" class="tabcontent">
+      <h3>Projects</h3>
+      <p>Index gedöns</p>
+    </div>
+
+    <div id="Dev_Log" class="tabcontent">
+      <h3>Dev_Log</h3>
+      <p>N blog irgendwann?</p>
+    </div>
+
+<!-- Sidebar -->
+    <div class="sidebar">
+      <h1 class="pagetitle">Programming Perry</h1>
+      <div class="sidelinks">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+    </div>
+    </div>
+
+<!-- Inhalt I guesss -->
+
   </body>
 </html>
