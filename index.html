@@ -14,44 +14,30 @@
   </head>
 
   <body>
-
+    <div class="window">
 <!-- Sidebar -->
-    <div class="sidebar">
-      <h1 class="pagetitle">Programming Perry</h1>
-      <div class="sidelinks">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+      <div class="sidebar">
+        <h1 class="pagetitle">Programming Perry</h1>
+        <div class="sidelinks">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Hauptcontainer -->
+      <div id="main-content" class="main-content">
+        <!-- Menü Tabs -->
+        <div class="tabs">
+          <button class="tablink" onclick="loadPage('index_content.html')">Index</button>
+          <button class="tablink" onclick="loadPage('projects_content.html')" id="defaultOpen">Projects</button>
+          <button class="tablink" onclick="loadPage('dev_log_content.html')">Dev_Log</button>
+        </div>
+
+        <!-- Tabs Inhalte-->
+        
+        <p>Inhalt wird geladen...</p>
+      </div>
     </div>
-    </div>
-
-<!-- Hauptcontainer -->
-<div class="main-content">
-
-  <!-- Menü Tabs -->
-  <div class="tabs">
-    <button class="tablink" onclick="openPage('Index', this, 'red')">Index</button>
-    <button class="tablink" onclick="openPage('Projects', this, 'green')" id="defaultOpen">Projects</button>
-    <button class="tablink" onclick="openPage('Dev_Log', this, 'blue')">Dev_Log</button>
-  </div>
-
-  <!-- Tabs Inhalte-->
-  <div id="Index" class="tabcontent">
-    <h3>Index</h3>
-    <p>Index gedöns</p>
-  </div>
-
-  <div id="Projects" class="tabcontent">
-    <h3>Projects</h3>
-    <p>Index gedöns</p>
-  </div>
-
-  <div id="Dev_Log" class="tabcontent">
-    <h3>Dev_Log</h3>
-    <p>N blog irgendwann?</p>
-  </div>
-
-</div>
-
 <script>
   function openPage(pageName, elmnt) {
       var i, tabcontent, tablinks;
@@ -61,7 +47,25 @@
       }
       document.getElementById(pageName).style.display = "block";
   }
-  document.getElementById("defaultOpen").click();
+
+  function loadPage(page) {
+  fetch(page)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Seite nicht gefunden: " + page);
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("main-content").innerHTML = data;
+    })
+    .catch(error => console.error('Fehler beim Laden:', error));
+}
+
+// Standardseite laden, wenn die Seite geöffnet wird
+document.addEventListener("DOMContentLoaded", function () {
+  loadPage("index_content.html");
+});
 </script>
 
   </body>
