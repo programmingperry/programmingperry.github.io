@@ -28,16 +28,21 @@
       <div id="main-content" class="main-content">
         <!-- Menü Tabs -->
         <div class="tabs">
-          <button class="tablink" onclick="loadPage('index_content.html')">Index</button>
-          <button class="tablink" onclick="loadPage('projects_content.html')" id="defaultOpen">Projects</button>
-          <button class="tablink" onclick="loadPage('dev_log_content.html')">Dev_Log</button>
+          <button class="tablink" onclick="loadPage('Unterseiten/index_content.html', this)" id="defaultOpen">Index</button>
+          <button class="tablink" onclick="loadPage('Unterseiten/projects_content.html', this)">Projects</button>
+          <button class="tablink" onclick="loadPage('Unterseiten/dev_log_content.html', this)">Dev_Log</button>
         </div>
 
         <!-- Tabs Inhalte-->
         
-        <p>Inhalt wird geladen...</p>
+        <!-- Hier wird der Inhalt geladen -->
+        <div id="content" class="content">
+          <p>Inhalt wird geladen...</p>
+        </div>
       </div>
     </div>
+
+    
 <script>
   function openPage(pageName, elmnt) {
       var i, tabcontent, tablinks;
@@ -48,7 +53,7 @@
       document.getElementById(pageName).style.display = "block";
   }
 
-  function loadPage(page) {
+  function loadPage(page, element) {
   fetch(page)
     .then(response => {
       if (!response.ok) {
@@ -57,15 +62,30 @@
       return response.text();
     })
     .then(data => {
-      document.getElementById("main-content").innerHTML = data;
+      document.getElementById("content").innerHTML = data;
+
+      // Entferne die "active-tab" Klasse von allen Tabs
+      document.querySelectorAll(".tablink").forEach(tab => {
+        tab.classList.remove("active-tab");
+      });
+
+      // Füge die "active-tab" Klasse zum geklickten Tab hinzu
+      element.classList.add("active-tab");
     })
     .catch(error => console.error('Fehler beim Laden:', error));
 }
 
 // Standardseite laden, wenn die Seite geöffnet wird
 document.addEventListener("DOMContentLoaded", function () {
-  loadPage("index_content.html");
+  let defaultTab = document.getElementById("defaultOpen");
+  console.log("Default Tab:", defaultTab); // Hier prüfen, ob das Element existiert
+  if (defaultTab) {
+    loadPage("Unterseiten/index_content.html", defaultTab);
+  } else {
+    console.error("defaultOpen nicht gefunden!");
+  }
 });
+
 </script>
 
   </body>
