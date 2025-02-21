@@ -1,66 +1,31 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-
-   body {
+/* Allgemeine Einstellungen*/
+  body {
     /*background: linear-gradient(120deg, #230342, rgba(0, 28, 133, 1), #95063d, #e8a909);*/
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin: 10% 20%; 
-    padding: 10% 20%;
     font-family: "Syne Mono", serif;
     font-weight: 400;
     font-style: normal;
-    border: 1px solid #000;
+    margin: 0;
+    display: flex
   }
 
-.menu {
-  padding: 0;
-
-}
-
-.menu a {
-  padding: 2% 15%;
-  border: 1px solid #ffffff;
-  margin: -5px;
-}
-
-/* Style tab links */
-.tabs{
-  border: 1px solid #000;
-  padding: 10%;
-  
-}
-.tablink {
-  border-top: 1px solid #000;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  color: rgb(0, 0, 0);
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 55%;
-}
-
-.tablink:hover {
-  background-color: #ff0000;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: rgb(255, 255, 255);
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
+  /* Sidebar */
+  .sidebar {
+    height: 100vh; 
+    width: 250px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   /* The sidebar menu */
 .sidebar {
   height: auto; /*Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
+  width: 250px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -68,17 +33,75 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   border: 1px solid #000;
-  margin: 20% 10%;
+  margin: 20% 16%;
 }
 
 .pagetitle {
   text-transform: lowercase;
-  margin: 10% 0 50% 0;
+  margin: 0 10% 80% 10%;
+  font-size: 19pt;
+  text-align: left;
 }
 
-.sidelinks a{
+.sidelinks a {
   display: block;
   clear: both;
   padding: 10%;
   border-top: 1px solid #000;
+}
+
+/* Hauptinhalt */
+.main-content {
+  margin: 0;
+  flex-grow: 1;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 20% 20% 20% 30%;
+}
+
+/* Tabs */
+.tabs{
+  display: flex; 
+  justify-content: center;
+  gap: 0px;
+  margin-bottom: -1px;
+}
+.tablink {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tablink:hover {
+  background-color: #ddd;
+}
+
+/* Tab Inhalte */
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+/* Responsive Anpassungen */
+@media screen and (max-width: 800px) {
+  .sidebar {
+      width: 180px;
+  }
+  .main-content {
+      margin-left: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+      position: absolute;
+      width: 100%;
+      height: auto;
+  }
+  .main-content {
+      margin-left: 0;
+      margin-top: 120px; /* Platz für Sidebar */
+  }
 }

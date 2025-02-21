@@ -14,32 +14,6 @@
   </head>
 
   <body>
-    
-<!-- Menü -->
-    <!-- <nav class="menu">
-      <a href="#index" class="menubutton">Index</a>
-      <a href="#projects" class="menubutton">Projects</a>
-      <a href="#devlog" class="menubutton">Dev_Log</a>
-    </nav>-->
-    <div class="tabs">
-      <button class="tablink" onclick="openPage('Index', this, 'red')">Index</button>
-      <button class="tablink" onclick="openPage('Projects', this, 'green')" id="defaultOpen">Projects</button>
-      <button class="tablink" onclick="openPage('Dev_Log', this, 'blue')">Dev_Log</button>
-    </div>
-    <div id="Index" class="tabcontent">
-      <h3>Index</h3>
-      <p>Index gedöns</p>
-    </div>
-
-    <div id="Projects" class="tabcontent">
-      <h3>Projects</h3>
-      <p>Index gedöns</p>
-    </div>
-
-    <div id="Dev_Log" class="tabcontent">
-      <h3>Dev_Log</h3>
-      <p>N blog irgendwann?</p>
-    </div>
 
 <!-- Sidebar -->
     <div class="sidebar">
@@ -50,7 +24,45 @@
     </div>
     </div>
 
-<!-- Inhalt I guesss -->
+<!-- Hauptcontainer -->
+<div class="main-content">
+
+  <!-- Menü Tabs -->
+  <div class="tabs">
+    <button class="tablink" onclick="openPage('Index', this, 'red')">Index</button>
+    <button class="tablink" onclick="openPage('Projects', this, 'green')" id="defaultOpen">Projects</button>
+    <button class="tablink" onclick="openPage('Dev_Log', this, 'blue')">Dev_Log</button>
+  </div>
+
+  <!-- Tabs Inhalte-->
+  <div id="Index" class="tabcontent">
+    <h3>Index</h3>
+    <p>Index gedöns</p>
+  </div>
+
+  <div id="Projects" class="tabcontent">
+    <h3>Projects</h3>
+    <p>Index gedöns</p>
+  </div>
+
+  <div id="Dev_Log" class="tabcontent">
+    <h3>Dev_Log</h3>
+    <p>N blog irgendwann?</p>
+  </div>
+
+</div>
+
+<script>
+  function openPage(pageName, elmnt) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      document.getElementById(pageName).style.display = "block";
+  }
+  document.getElementById("defaultOpen").click();
+</script>
 
   </body>
 </html>
