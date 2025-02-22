@@ -91,12 +91,20 @@ a:hover, a:active {
   flex-grow: 1;
   height: 100%;
   overflow-y: auto;
+  background: var(--background-main);
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.content_window {
+  padding: 10% 10% 5%;
+  font-family: var(--content-text);
+  width: ;
+  margin: 0;
 }
 
 .content {
-  padding: 10% 10% 5%;
-  background-color: var(--background-main);
-  font-family: var(--content-text);
   font-size: 14px;
   line-height: 1.6em;
   text-align: justify;
@@ -151,9 +159,9 @@ a:hover, a:active {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--background-main);
+  background: none;
   margin-top:10px;
-
+  margin-bottom: 8px;
   border-bottom-right-radius: 15px;
 }
 
