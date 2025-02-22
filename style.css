@@ -84,6 +84,9 @@ a:hover, a:active {
   width: 150px;
   padding-left: 10%;
   margin-top: 35vh;
+  padding: 10% 10% 5%;
+  font-family: var(--content-text);
+  margin: 0;
 }
 
 /* Hauptinhalt */
@@ -92,22 +95,16 @@ a:hover, a:active {
   height: 100%;
   overflow-y: auto;
   background: var(--background-main);
-
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-.content_window {
-  padding: 10% 10% 5%;
-  font-family: var(--content-text);
-  width: ;
-  margin: 0;
-}
 
 .content {
   font-size: 14px;
   line-height: 1.6em;
   text-align: justify;
+  padding: 10%;
 }
 
 /* Tabs */
