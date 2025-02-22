@@ -1,15 +1,12 @@
 [
-    {
+  {
       "title": "Number Converter - Python Project",
-      "date": "January 2025 | End of first semester project",
       "description": "A tool to convert numbers between decimal, binary, and hexadecimal.",
       "github": "https://github.com/yourrepo/number_converter"
-    },
-    {
-      "title": "AI Chatbot",
-      "date": "March 2025 | Second semester project",
-      "description": "An AI chatbot built with Python and GPT-3.",
-      "github": "https://github.com/yourrepo/ai_chatbot"
-    }
-  ]
-  
+  },
+  {
+      "title": "Another Project",
+      "description": "Some description",
+      "github": "https://github.com/yourrepo/another_project"
+  }
+]
