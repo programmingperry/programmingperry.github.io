@@ -7,24 +7,34 @@ function loadPage(page, element) {
             return response.text();
         })
         .then(data => {
-            // Inhalte in #content einfügen
             document.getElementById("content").innerHTML = data;
 
-            // Aktiven Tab markieren
             document.querySelectorAll(".tablink").forEach(tab => tab.classList.remove("active-tab"));
             if (element) element.classList.add("active-tab");
 
-            // Wenn projects_content.html geladen wurde, lade und führe projects.js aus
+            // Dynamische Inhalte laden
             if (page.includes('projects_content.html')) {
-                loadProjectsJS();  // Lade das Script für projects.js
+                displayProjects();
+            }
+            if (page.includes('dev_log_content.html')) {
+                displayBlogPosts();
             }
         })
         .catch(error => console.error("Fehler beim Laden:", error));
 }
 
 function loadProjectsJS() {
-    const script = document.createElement("script");
-    script.src = "javascript/projects.js";
-    script.type = "text/javascript";
-    document.body.appendChild(script);  // Das Script wird jetzt dynamisch hinzugefügt
+    if (!document.querySelector("script[src='/javascript/projects.js']")) {
+        const script = document.createElement("script");
+        script.src = "/javascript/projects.js";
+        script.type = "text/javascript";
+        script.onload = () => displayProjects(); // Sobald das Skript geladen ist, rufe die Funktion auf
+        document.body.appendChild(script);
+    } else {
+        displayProjects();
+    }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("defaultOpen").click();
+});
