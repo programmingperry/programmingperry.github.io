@@ -27,8 +27,8 @@ function loadProjectsJS() {
     script.src = "javascript/projects.js";
     script.type = "text/javascript";
     script.onload = function() {
-        // Wenn das Skript geladen ist, rufe displayProjects() auf
-        displayProjects();  
+        // Korrekte Funktion aus projects.js aufrufen
+        loadMarkdownFiles();  
     };
     document.body.appendChild(script);  // Das Script wird jetzt dynamisch hinzugefügt
 }
