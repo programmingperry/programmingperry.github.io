@@ -11,11 +11,17 @@
   --link-color: #ddc094;
   --link-hov: #988835;
   --h1-color: #e1e1e1;
+  --accent-green: #859900; 
 }
 
 ::selection {
   background: var(--highlight);
 }
+
+html, body {
+  overflow: hidden;
+}
+
 
 body {
   /*background: linear-gradient(120deg, #230342, rgba(0, 28, 133, 1), #95063d, #e8a909);*/
@@ -77,60 +83,60 @@ a:hover, a:active {
 .sidelinks a {
   display: block;
   clear: both;
-  padding: 5% 10%;
+  padding: 5px 10%;
 }
 
-.perry {
-  width: 150px;
-  padding-left: 10%;
-  margin-top: 35vh;
-  padding: 10% 10% 5%;
-  font-family: var(--content-text);
-  margin: 0;
-}
+
 
 /* Hauptinhalt */
 .main-content {
   flex-grow: 1;
-  height: auto;
-  overflow-y: scroll;
+  height: 70vh; /* Die Höhe an das Fenster anpassen */
+  display: flex;
+  flex-direction: column; /* Damit #content sich anpasst */
   background: var(--background-main);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+#content {
+  height: 100%; /* Stelle sicher, dass es in das Fenster passt */
+  max-height: 100%;
+  overflow-y: auto; /* Automatische Scrollbar, wenn nötig */
+  scrollbar-gutter: stable; /* Verhindert Verschiebungen */
 }
 
 .content {
   font-size: 14px;
   line-height: 1.6em;
   text-align: justify;
-  padding: 10%;
+  padding: 5% 10%;
+}
+
+.picture {
+  border-radius: 15px;
 }
 
 .project-item {
   border-radius: 15px;
   background: var(--sidebar);
+  padding: 25px;
+  margin: 10px 0;
 }
 
 .project-item h3 {
   margin: 0;
+  color: var(--accent-green)
 }
-
-.project-item a {
-  text-decoration: none;
-}
-
-.project-item a:hover {
-}
-
 
 /* Tabs */
 .tabs{
   display: flex; 
   justify-content: left;
   width: 100%;
-  max-width: calc(100% - 193px);
+  max-width: 100%;
   background-color: var(--background-tabs);
-  position: absolute;
+  position: relative;
   top: 0;
   z-index: 10;
   border-top-right-radius: 15px;;
@@ -166,18 +172,16 @@ a:hover, a:active {
 }
 
 
-
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: none;
-  margin-top: 10px;
-  margin-bottom: 8px;
   border-bottom-right-radius: 15px;
+  margin-bottom: 10px;
 }
 
 /* Handle */

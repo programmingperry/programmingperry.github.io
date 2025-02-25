@@ -1,18 +1,8 @@
 const projects = [
   {
-      title: "Portfolio Website",
-      description: "Meine persönliche Portfolio-Website.",
-      link: "https://github.com/username/portfolio"
-  },
-  {
-      title: "Blog System",
-      description: "Ein Markdown-basiertes Blog-System.",
-      link: "https://github.com/username/blog"
-  },
-  {
-      title: "Cooles JavaScript Projekt",
-      description: "Ein kleines Projekt zum Lernen von JavaScript.",
-      link: "https://github.com/username/cool-js-project"
+      title: "Number Converter",
+      description: "A python program to convert numbers between the decimal, binary and hexadecimal systems in the console. The program is only accessible with a login, which is executed via a MySQL database. Additional the program should be working on a Raspberry Pie. For this reason it was a team assignment with a system integrator.",
+      github: "https://github.com/username/portfolio"
   }
 ];
 
@@ -31,7 +21,7 @@ function displayProjects() {
       projectElement.innerHTML = `
           <h3>${project.title}</h3>
           <p>${project.description}</p>
-          <a href="${project.link}" target="_blank">Mehr erfahren</a>
+          <a href="${project.github}" target="_blank">GitHub Repository</a>
       `;
       projectContainer.appendChild(projectElement);
   });
