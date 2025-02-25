@@ -92,8 +92,8 @@ a:hover, a:active {
 /* Hauptinhalt */
 .main-content {
   flex-grow: 1;
-  height: 100%;
-  overflow-y: auto;
+  height: auto;
+  overflow-y: scroll;
   background: var(--background-main);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -107,11 +107,8 @@ a:hover, a:active {
 }
 
 .project-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  background: #f9f9f9;
+  border-radius: 15px;
+  background: var(--sidebar);
 }
 
 .project-item h3 {
@@ -119,12 +116,10 @@ a:hover, a:active {
 }
 
 .project-item a {
-  color: #007bff;
   text-decoration: none;
 }
 
 .project-item a:hover {
-  text-decoration: underline;
 }
 
 
@@ -132,11 +127,11 @@ a:hover, a:active {
 .tabs{
   display: flex; 
   justify-content: left;
-  width: calc(100% - 193px);
+  width: 100%;
+  max-width: calc(100% - 193px);
   background-color: var(--background-tabs);
   position: absolute;
   top: 0;
-  left: 193px;
   z-index: 10;
   border-top-right-radius: 15px;;
 }
@@ -170,6 +165,8 @@ a:hover, a:active {
   background-color: var(--background-main);
 }
 
+
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -178,7 +175,7 @@ a:hover, a:active {
 /* Track */
 ::-webkit-scrollbar-track {
   background: none;
-  margin-top:10px;
+  margin-top: 10px;
   margin-bottom: 8px;
   border-bottom-right-radius: 15px;
 }

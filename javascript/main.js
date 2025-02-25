@@ -32,3 +32,8 @@ function loadProjectsJS() {
     };
     document.body.appendChild(script);  // Das Script wird jetzt dynamisch hinzugefügt
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Direkt beim Laden die "Index"-Seite laden
+    loadPage('Unterseiten/index_content.html', document.getElementById("defaultOpen"));
+});
