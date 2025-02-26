@@ -18,22 +18,72 @@ function loadPage(page, element) {
             if (page.includes('projects_content.html')) {
                 loadProjectsJS();  // Lade das Script für projects.js
             }
+
+            // Blog-Script laden, wenn Blog-Seite geöffnet wird
+            if (page.includes('dev_log_content.html')) {
+                loadBlogJS();
+            }
         })
         .catch(error => console.error("Fehler beim Laden:", error));
 }
 
 function loadProjectsJS() {
+    // Prüfen, ob marked schon geladen wurde
+    if (typeof marked === "undefined") {
+        const markedScript = document.createElement("script");
+        markedScript.src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js";
+        markedScript.type = "text/javascript";
+        markedScript.onload = function () {
+            console.log("marked.js geladen!");
+            loadProjectsScript();  // Erst wenn marked.js fertig ist, dann projects.js laden
+        };
+        document.body.appendChild(markedScript);
+    } else {
+        loadProjectsScript(); // Falls marked schon existiert, direkt projects.js laden
+    }
+}
+
+function loadProjectsScript() {
     const script = document.createElement("script");
     script.src = "javascript/projects.js";
     script.type = "text/javascript";
-    script.onload = function() {
-        // Korrekte Funktion aus projects.js aufrufen
-        loadMarkdownFiles();  
+    script.onload = function () {
+        console.log("projects.js geladen!");
+        loadMarkdownFiles(); // Markdown-Projekte laden
     };
-    document.body.appendChild(script);  // Das Script wird jetzt dynamisch hinzugefügt
+    document.body.appendChild(script);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Direkt beim Laden die "Index"-Seite laden
-    loadPage('Unterseiten/index_content.html', document.getElementById("defaultOpen"));
+document.addEventListener("DOMContentLoaded", function () {
+    const defaultTab = document.getElementById("defaultOpen");
+    if (defaultTab) {
+        defaultTab.click(); // Simuliert einen Klick auf den Standard-Tab
+    } else {
+        console.error("Fehler: Der Default-Tab (#defaultOpen) wurde nicht gefunden!");
+    }
 });
+
+function loadBlogJS() {
+    if (typeof marked === "undefined") {
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js";
+        script.onload = function() {
+            console.log("marked.js geladen!");
+            loadBlogScript();
+        };
+        document.body.appendChild(script);
+    } else {
+        loadBlogScript();
+    }
+}
+
+function loadBlogScript() {
+    const script = document.createElement("script");
+    script.src = "javascript/blog.js";
+    script.onload = function() {
+        loadBlogPosts(); // Blogposts laden
+    };
+    document.body.appendChild(script);
+}
+
+

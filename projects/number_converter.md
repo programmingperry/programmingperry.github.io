@@ -1,7 +1,7 @@
-# Number Converter
+## Number Converter
 A Python program to convert numbers between the decimal, binary, and hexadecimal systems in the console.
 
-## Features
+### Features
 - User login with MySQL database
 - Works on Raspberry Pi
 - Team project with a system integrator
