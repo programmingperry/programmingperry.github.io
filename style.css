@@ -6,7 +6,7 @@
   --sidebar: #132a31;
   --highlight: #2f464c;
   --text: #869496;
-  --content-text: "JetBrains Mono";
+  --content-text: "Space Mono";
   --font-main: "Syne Mono";
   --link-color: #ddc094;
   --link-hov: #988835;
@@ -20,6 +20,11 @@
 
 html, body {
   overflow: hidden;
+}
+
+p {
+  font-family: var(--content-text);
+  font-size: 16px;;
 }
 
 
@@ -104,10 +109,11 @@ a:hover, a:active {
   max-height: 100%;
   overflow-y: auto; /* Automatische Scrollbar, wenn nötig */
   scrollbar-gutter: stable; /* Verhindert Verschiebungen */
+  font-weight: 700;
 }
 
 .content {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6em;
   text-align: justify;
   padding: 5% 10%;
