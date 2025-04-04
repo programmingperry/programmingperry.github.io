@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/style_subpages.css" rel="stylesheet" type="text/css" media="all">
+  <title>Index</title>
   <style>
     .perry {
     width: 120px;
@@ -12,15 +14,15 @@
   }
   </style>
 </head>
-    <h2>Hey, where's Perry?</h2>
-    <h3></h3>
-    <p>Welcome to my space on the internet, where I intend to share my coding learning journey and my projects along the way.</p>
-    <p>When the topic "Hardware" began in school, I had to ask what exactly peripherals are. While this seems pretty clear in english, as far as I can tell, it isn't that simple in German, 
-        since the word has several meanings in geographie, IT, linguistics, biology, philosophy etc.</p>
-    <p>That's how Perry somehow established and stuck to me. And when I hear Perry, I think of one of my favourite shows from childhood - Phineas and Ferb. 
-        Perry is their teal colored Platypus, who apparently doesn't do much but actually has a secret
-        life as a special agent, fighting his evil nemesis Dr. Doofenschmirz. 
-    </p>
-    <p>Since then I've decided to make Perry my kind of emotional support / spirit animal on my way to becoming a programmer.</p>
-    <img class="perry" src="/assets/perrypng.png"/>
+  <h1>Hello World</h1>
+  <p>Former photographer, current code enthusiast, and full-time retrainer on a mission to become a well-rounded software developer. From SQL to Python, frontend to backend.<br><br>
+    While I traded my camera for a keyboard, I still see things in frames – just now it's functions, loops, and databases instead of lenses and light.
+    <br><br>
+    This blog/portfolio is where I share my journey, projects, and the occasional insight (or bug-induced meltdown). <br><br>Stick around if you're into code, curiosity, and a bit of chaos.
+  </p>
+  <section id="page_buttons">
+    <button id="indexbutton" onclick="loadPage('Unterseiten/about.html', this)">More about me</button>
+    <button id="indexbutton" onclick="loadPage('Unterseiten/projects_content.html', this)">What I build</button>
+    <button id="indexbutton" onclick="loadPage('Unterseiten/dev_log_content.html', this)">Learning Journey</button>
+  </section>
 </html>

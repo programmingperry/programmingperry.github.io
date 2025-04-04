@@ -1,22 +1,25 @@
-<h2>Dev_Log</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style_subpages.css" rel="stylesheet" type="text/css" media="all">
+    <title>Dev_log</title>
+</head>
+<body>
+    <h1 id="page_title">Dev_Log</h1>
+    <p>Some insights, thoughts and experiences along my coding learning journey.</p>
 
-<style>
-    /* Abstände für Blogposts */
-    .blog-item {
-        padding: 10px;
-        margin: 30px 0 30px 0; /* Abstand zwischen den einzelnen Beiträgen */
-        border-top: 7px dotted #2f464c; /* Optional: Trennlinie zwischen den Beiträgen */
-        line-height: 1.5;
-    }
-</style>
+    <div id="blog-list">
+        <p>Loading...</p>
+    </div>
 
-<div id="blog-list">
-    <p>Loading...</p>
-</div>
-
-<!-- Markdown Library -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="javascript/blog.js"></script>
-<script>
-    loadBlogPosts();
-</script>
+    <!-- Markdown Library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="javascript/blog.js"></script>
+    <script>
+        loadBlogPosts();
+    </script>
+</body>
+</html>
