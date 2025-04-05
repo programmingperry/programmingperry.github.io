@@ -1,0 +1,81 @@
+/* Allgemeines */
+
+#page_title {
+  color: #fff;
+}
+
+/* Index */
+
+#page_buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+  justify-content: right;
+}
+
+#indexbutton {
+  padding: 10px;
+  margin: 5px 0% 5px 55%;
+  background-color: var(--background-tabs);
+  border: none;
+  border-radius: 10px;
+  color: var(--accent-green);
+  font-family: var(--font-main);
+  font-size: 16px;
+}
+
+#indexbutton :hover {
+  background-color: var(--sidebar);
+  color: var(--link-color);
+}
+
+/* About Page*/
+
+.picture {
+  border-radius: 15px;
+}
+
+/* Projects Page*/
+
+.project-item {
+  border-radius: 15px;
+  background: var(--sidebar);
+  padding: 20px 35px;
+  margin: 30px 0 30px 0; /* Abstand zwischen den einzelnen Beiträgen */
+}
+
+.project-item h3 {
+  margin: 0;
+  color: var(--accent-green);
+}
+
+/* Checklisten-Styling für Markdown */
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+ul.checklist li {
+  padding-left: 1.6em;
+  position: relative;
+}
+ul.checklist input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+
+
+
+/* DevLog*/
+
+.blog-item {
+  border-radius: 15px;
+  background: var(--sidebar);
+  padding: 20px 35px;
+  margin: 30px 0 30px 0; /* Abstand zwischen den einzelnen Beiträgen */
+  line-height: 1.5;
+}
+
+.blog-item h1, h2 {
+  color: var(--accent-green);
+}

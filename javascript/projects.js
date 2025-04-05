@@ -10,6 +10,8 @@ async function loadMarkdownFiles() {
 
     // Liste der Markdown-Dateien
     const markdownFiles = [
+        "/projects/1projectlist.md",
+        "/projects/console_chess.md",
         "/projects/number_converter.md"
     ];
 
@@ -32,3 +34,10 @@ async function loadMarkdownFiles() {
     }
 }
 
+document.querySelectorAll("ul").forEach(ul => {
+    const isChecklist = ul.querySelector('input[type="checkbox"]');
+    if (isChecklist) {
+      ul.classList.add("checklist");
+    }
+  });
+  

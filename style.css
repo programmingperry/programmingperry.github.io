@@ -56,6 +56,14 @@ h1, h2, h3, h4 {
   font-family: var(--font-main);
 }
 
+h4 {
+  color: var(--text);
+  font-family: var(--font-main);
+  color: var(--link-hov);
+  font-style: italic;
+  font-size: 14px;
+}
+
 a, a:visited {
   color: var(--link-color);
   text-decoration: none;
@@ -126,21 +134,18 @@ a:hover, a:active {
   padding: 5% 10%;
 }
 
-.picture {
-  border-radius: 15px;
+
+ul {
+  font-size: 16px;
+  display: inline-block;
+  text-align: left;
+  list-style: square;
+  list-style-position: outside;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.project-item {
-  border-radius: 15px;
-  background: var(--sidebar);
-  padding: 25px;
-  margin: 10px 0;
-}
 
-.project-item h3 {
-  margin: 0;
-  color: var(--accent-green)
-}
 
 /* Tabs */
 .tabs{
@@ -184,7 +189,7 @@ a:hover, a:active {
   background-color: var(--background-main);
 }
 
-
+/* Website Scrollbar*/
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -207,6 +212,7 @@ a:hover, a:active {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--background-tabs);
 }
+
 
 /* Responsive Anpassungen */
 @media screen and (max-width: 800px) {
