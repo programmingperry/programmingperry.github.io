@@ -10,9 +10,8 @@ async function loadBlogPosts() {
 
     // Liste der Blogpost-Dateien
     const blogFiles = [
-        "blogposts/test.md",
-        "blogposts/2025-02-22-test-blog.md",
-        "blogposts/2test-blog.md"
+        "blogposts/24_04_02_logicisaskill.md",
+        "blogposts/24_02_20_aiandlearning.md"
     ];
 
     for (const file of blogFiles) {
