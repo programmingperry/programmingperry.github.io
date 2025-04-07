@@ -5,10 +5,11 @@ A Python program to convert numbers between the decimal, binary, and hexadecimal
 ### Goals
 - Learn Python structure while writing complex programs
 - Write a documentation for the program
+- Collaborate with a system integrator
 
 ### Features
 - User login with MySQL database
 - Works on Raspberry Pi
-- Team project with a system integrator
 
-[GitHub Repository](https://github.com/username/portfolio)
+<a href="https://github.com/programmingperry/numberconverter/tree/main" target="_blank">GitHub Repository</a>
+

@@ -1,9 +1,12 @@
+/*---------------------------------------------------------------------------------------*/
 /* Allgemeines */
 
 #page_title {
   color: #fff;
 }
 
+
+/*---------------------------------------------------------------------------------------*/
 /* Index */
 
 #page_buttons {
@@ -30,19 +33,29 @@
   cursor: pointer; 
 }
 
+
+/*---------------------------------------------------------------------------------------*/
 /* About Page*/
 
 .picture {
   border-radius: 15px;
 }
 
+.agentp {
+  float: left; /* Bild nach links ausrichten */
+  margin-right: 15px; /* Abstand zwischen Bild und Text */
+  margin-bottom: 10px; /* Abstand nach unten */
+}
+
+
+/*---------------------------------------------------------------------------------------*/
 /* Projects Page*/
 
 .project-item {
   border-radius: 15px;
   background: var(--sidebar);
   padding: 20px 35px;
-  margin: 30px 0 30px 0; /* Abstand zwischen den einzelnen Beiträgen */
+  margin: 30px 0 60px 0; /* Abstand zwischen den einzelnen Beiträgen */
 }
 
 .project-item h3 {
@@ -71,16 +84,14 @@ ul.checklist input[type="checkbox"] {
 }
 
 
-
-
-
+/*---------------------------------------------------------------------------------------*/
 /* DevLog*/
 
 .blog-item {
   border-radius: 15px;
   background: var(--sidebar);
   padding: 20px 35px;
-  margin: 30px 0 30px 0; /* Abstand zwischen den einzelnen Beiträgen */
+  margin: 30px 0 60px 0; /* Abstand zwischen den einzelnen Beiträgen */
   line-height: 1.5;
 }
 
