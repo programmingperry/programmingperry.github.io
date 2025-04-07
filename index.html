@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- FontAwesome Icons -->
         
     <title>programming perry</title>
 
@@ -18,20 +22,22 @@
   </head>
 
   <body>
+  <!-- Mobiler Header (für kleine Bildschirme) -->
+    <div class="mobile-header">
+      <h1 class="pagetitle-mobile">Programming Perry</h1>
+    </div>
+
     <div class="window">
       <!-- Sidebar für Desktop -->
       <div class="sidebar">
         <h1 class="pagetitle">Programming Perry</h1>
         <div class="sidelinks">
-          <a href="https://github.com/programmingperry" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/nele-mccurrach-924947350/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/programmingperry" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nele-mccurrach-924947350/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
 
-      <!-- Mobiler Header (für kleine Bildschirme) -->
-      <div class="mobile-header">
-        <h1 class="pagetitle-mobile">Programming Perry</h1>
-      </div>
+      
 
       <!-- Hauptcontainer -->
       <div id="main-content" class="main-content">
@@ -42,8 +48,7 @@
           <button class="tablink" onclick="loadPage('Unterseiten/about.html', this)">About</button>
           <button class="tablink" onclick="loadPage('Unterseiten/projects_content.html', this)">Projects</button>
           <button class="tablink" onclick="loadPage('Unterseiten/dev_log_content.html', this)">Dev_Log</button>
-          <button class="sidebar-link" onclick="window.open('https://github.com/programmingperry');">GitHub</button>
-          <button class="sidebar-link" onclick="window.open('https://www.linkedin.com/in/nele-mccurrach-924947350/');">LinkedIn</button>
+          
         </div>
 
         <!-- Tabs Inhalte-->
@@ -54,6 +59,17 @@
 
       </div>
     </div>
+
+     <!-- Social Links unter dem Fenster -->
+     <div class="social-links">
+      <button class="social-link" onclick="window.open('https://github.com/programmingperry');">
+        <i class="fab fa-github"></i> <!-- GitHub Icon -->
+      </button>
+      <button class="social-link" onclick="window.open('https://www.linkedin.com/in/nele-mccurrach-924947350/');">
+        <i class="fa-brands fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+      </button>
+    </div>
+
     <script defer src="javascript/main.js" defer></script>
   </body>
 </html>

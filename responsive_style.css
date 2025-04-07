@@ -1,43 +1,51 @@
 /*---------------------------------------------------------------------------------------*/
 /* --- Mobilansicht --- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     /* Sidebar für Mobilgeräte ausblenden */
-    .sidebar {
-      display: none;
+    .sidebar,
+    .sidebar *,
+    .sidelinks {
+        display: none !important;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        height: 0;
     }
   
     .window {
         margin: 5vh auto; /* Platz oben und unten */
         padding: 5vw; /* Platz auf den Seiten */
-        width: 90vw; /* Hauptfenster ist etwas schmaler */
+        max-width: 90%;
+        width: 90%; /* Hauptfenster ist etwas schmaler */
         border-radius: 15px;
+        box-sizing: border-box;
     }
   
     .main-content {
       margin: 0px;
-      width: 90%;
+      width: 100%;
       height: auto;
       border-radius: 15px;
-      overflow: hidden;
+      overflow-x: hidden;
     }
   
     .mobile-header {
+        padding: 10px;
+        font-size: 22px;
         display: block;
         text-align: center;
-        padding: 1em;
         background-color: transparent; /* Kein Hintergrund */
         color: var(--h1-color); /* Textfarbe */
-        position: absolute; /* Absolut positioniert */
-        top: -8%; /* Positioniert oben im Fenster */
-        padding-bottom: 10%;
-        left: 0; /* Auf der linken Seite ausrichten */
+        position: fixed; /* Fest oben im Fenster */
+        top: 0; /* Positioniert den Header oben */
+        left: 0; /* Positioniert den Header links */
         width: 100%; /* Breite auf 100% setzen */
         z-index: 1; /* Damit der Header über allem anderen schwebt */
+        box-sizing: border-box; /* Verhindert, dass Padding die Gesamtbreite überschreitet */
     }
     
     .mobile-header .pagetitle-mobile {
-        margin: 0;
         font-size: 1.5em;
     }
   
@@ -61,7 +69,14 @@
 
 
     /* Links aus der Sidebar in die Tabs verschieben */
- 
+    /* Tabs Container */
+    .tabs {
+        display: flex;              /* Flexbox aktivieren */
+        flex-wrap: wrap;            /* Erlaubt das Umbruchverhalten */
+        justify-content: flex-start; /* Positioniert die Tabs am Anfang */
+        gap: 0px;                  /* Abstand zwischen den Tabs */
+        
+    }
 
     .tabs button {
         background-color: var(--background-tabs);
@@ -71,6 +86,7 @@
         border-right: 1px solid var(--sidebar);
         font-family: var(--font-main);
         color: var(--link-color);
+        font-size: 15px;
     }
 
 
@@ -91,12 +107,78 @@
     .tabs button.sidebar-link:hover {
         color: var(--accent-green);
     }
-  }
+    
+   /* Verhindert horizontales Scrollen, falls das passiert */
+    body {
+        overflow-x: hidden;
+    }
 
+    .social-links {
+        display: flex;
+        justify-content: center;  /* Zentriert die Links horizontal */
+        position: fixed;          /* Fixiert die Position am Bildschirmrand */
+        bottom: 0;                /* Positioniert sie am unteren Rand des Bildschirms */
+        left: 50%;                /* Setzt die horizontale Position auf 50% des Bildschirms */
+        transform: translateX(-50%); /* Verschiebt sie um die Hälfte ihrer Breite nach links, um sie exakt zu zentrieren */
+        z-index: 2;               /* Stellt sicher, dass sie immer über anderen Elementen angezeigt wird */
+        gap: 1em;                 /* Abstand zwischen den Buttons */
+        padding: 2em;             /* Etwas Platz rundherum */
+      }
+
+      .social-link {
+        background-color: transparent;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;  /* Zentriert das Icon horizontal */
+        align-items: center; 
+      } 
+    
+      .social-link i {
+        font-size:35px;  /* Icon-Größe */
+        color: var(--link-color)/* Farbe der Icons */
+      }
+    
+      .social-link i:hover {
+        color: var(--accent-green)/* Farbe der Icons */
+      }
+      .social-link:hover {
+        background-color: transparent;  /* Hover-Effekt */
+      }
+
+      #aboutimage {
+        width: 70%; /* Bild nimmt die volle Breite ein */
+        margin: 10px;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column; /* Stellt sicher, dass Bild und Text untereinander sind */
+        align-items: center; /* Zentriert alles im Container */
+    }
+
+    .about-text {
+        padding: 10px; /* Etwas Abstand zum Bild */
+        text-align: justify; /* Text wird gleichmäßig verteilt */
+    }
+      
+      .agentp {
+        float: left; /* Bild nach links ausrichten */
+        margin-right: 30px; /* Abstand zwischen Bild und Text */
+        margin-bottom: 10px; /* Abstand nach unten */
+        width: 35%;
+        height: auto;
+      }
+ 
+}
   
   /* --- Desktop-Ansicht --- */
-  @media screen and (min-width: 601px) {
-  
+  @media screen and (min-width: 700px) {
+    .window {
+        width: 95%;
+      }
+
     .sidebar {
         height: 100%; /*Full-height: remove this if you want "auto" height */
         width: 200px; /* Set the width of the sidebar */
@@ -111,10 +193,7 @@
         font-size: 19pt;
         text-align: left;
       }
-      
-      .sidelinks {
-        margin-top: 50vh;
-      }
+   
       .sidelinks a {
         display: block;
         clear: both;
@@ -127,6 +206,10 @@
     }
 
     .tabs button.sidebar-link {
+        display: none;
+    }
+
+    .social-links {
         display: none;
     }
   }

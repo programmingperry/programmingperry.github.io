@@ -2,7 +2,7 @@
 /* Allgemeines */
 
 #page_title {
-  color: #fff;
+  color: var(--title-color);
 }
 
 
@@ -37,14 +37,21 @@
 /*---------------------------------------------------------------------------------------*/
 /* About Page*/
 
-.picture {
-  border-radius: 15px;
+#aboutimage {
+  border-radius: 5px;
+  float: right;
+  margin-left: 30px;
+  transform: scaleX(-1);
 }
 
 .agentp {
   float: left; /* Bild nach links ausrichten */
-  margin-right: 15px; /* Abstand zwischen Bild und Text */
+  margin-right: 30px; /* Abstand zwischen Bild und Text */
   margin-bottom: 10px; /* Abstand nach unten */
+}
+
+.perryh2 {
+  color: var(--accent-green);
 }
 
 
@@ -58,9 +65,13 @@
   margin: 30px 0 60px 0; /* Abstand zwischen den einzelnen Beiträgen */
 }
 
+.project-item h1 {
+  color: var(--accent-green);
+  font-size: 30px;
+}
+
 .project-item h3 {
   margin: 0;
-  color: var(--accent-green);
 }
 
 /* Checklisten-Styling für Markdown */
@@ -95,6 +106,14 @@ ul.checklist input[type="checkbox"] {
   line-height: 1.5;
 }
 
-.blog-item h1, h2 {
+.blog-item h1 {
   color: var(--accent-green);
+  font-size: 30px;
+}
+
+.blog-item h3 {
+  letter-spacing: 0.4em;
+  font-size: 14px;
+  color: var(--link-hov);
+  text-align: right;
 }
