@@ -42,12 +42,14 @@
   float: right;
   margin-left: 30px;
   transform: scaleX(-1);
+  opacity: 0.6;
 }
 
 .agentp {
   float: left; /* Bild nach links ausrichten */
   margin-right: 30px; /* Abstand zwischen Bild und Text */
   margin-bottom: 10px; /* Abstand nach unten */
+  opacity: 0.8;
 }
 
 .perryh2 {
