@@ -24,9 +24,10 @@
   font-size: 16px;
 }
 
-#indexbutton :hover {
+#indexbutton:hover {
   background-color: var(--sidebar);
   color: var(--link-color);
+  cursor: pointer; 
 }
 
 /* About Page*/
@@ -53,16 +54,23 @@
 ul.checklist {
   list-style: none;
   padding-left: 0;
+  margin: 1em 0;
 }
+
 ul.checklist li {
-  padding-left: 1.6em;
   position: relative;
+  padding-left: 1.6em;
+  margin-bottom: 0.8em;
 }
+
 ul.checklist input[type="checkbox"] {
   position: absolute;
   left: 0;
   top: 0.1em;
+  accent-color: var(--accent-green);
 }
+
+
 
 
 

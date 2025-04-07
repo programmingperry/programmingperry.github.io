@@ -32,12 +32,15 @@ async function loadMarkdownFiles() {
             console.error(error);
         }
     }
+
+    document.querySelectorAll("ul").forEach(ul => {
+        const isChecklist = ul.querySelector('input[type="checkbox"]');
+        if (isChecklist) {
+        ul.classList.add("checklist");
+        }
+    });
+
 }
 
-document.querySelectorAll("ul").forEach(ul => {
-    const isChecklist = ul.querySelector('input[type="checkbox"]');
-    if (isChecklist) {
-      ul.classList.add("checklist");
-    }
-  });
+
   

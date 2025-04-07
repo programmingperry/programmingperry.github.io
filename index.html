@@ -3,47 +3,50 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         
     <title>programming perry</title>
 
     <!-- CSS und JS laden -->
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/responsive_style.css" rel="stylesheet" type="text/css" media="all">
 
   </head>
 
   <body>
     <div class="window">
-<!-- Sidebar -->
+      <!-- Sidebar für Desktop -->
       <div class="sidebar">
         <h1 class="pagetitle">Programming Perry</h1>
         <div class="sidelinks">
           <a href="#">GitHub</a>
           <a href="#">LinkedIn</a>
         </div>
-        <!-- <img class="perry" src="/assets/agentp.png"/> -->
       </div>
 
+      <!-- Mobiler Header (für kleine Bildschirme) -->
+      <div class="mobile-header">
+        <h1 class="pagetitle-mobile">Programming Perry</h1>
+      </div>
 
       <!-- Hauptcontainer -->
       <div id="main-content" class="main-content">
+        
         <!-- Menü Tabs -->
         <div class="tabs">
           <button class="tablink" onclick="loadPage('Unterseiten/index_content.html', this)" id="defaultOpen">Index</button>
           <button class="tablink" onclick="loadPage('Unterseiten/about.html', this)">About</button>
           <button class="tablink" onclick="loadPage('Unterseiten/projects_content.html', this)">Projects</button>
           <button class="tablink" onclick="loadPage('Unterseiten/dev_log_content.html', this)">Dev_Log</button>
+          <button class="sidebar-link" onclick="window.open('');">GitHub</button>
+          <button class="sidebar-link" onclick="window.open('');">LinkedIn</button>
         </div>
 
         <!-- Tabs Inhalte-->
-        
         <!-- Hier wird der Inhalt geladen -->
         <div id="content" class="content">
           <p>Inhalt wird geladen...</p>

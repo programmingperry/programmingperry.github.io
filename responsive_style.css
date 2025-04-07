@@ -1,0 +1,133 @@
+/*---------------------------------------------------------------------------------------*/
+/* --- Mobilansicht --- */
+@media screen and (max-width: 600px) {
+
+    /* Sidebar für Mobilgeräte ausblenden */
+    .sidebar {
+      display: none;
+    }
+  
+    .window {
+        margin: 5vh auto; /* Platz oben und unten */
+        padding: 5vw; /* Platz auf den Seiten */
+        width: 90vw; /* Hauptfenster ist etwas schmaler */
+        border-radius: 15px;
+    }
+  
+    .main-content {
+      margin: 0px;
+      width: 90%;
+      height: auto;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  
+    .mobile-header {
+        display: block;
+        text-align: center;
+        padding: 1em;
+        background-color: transparent; /* Kein Hintergrund */
+        color: var(--h1-color); /* Textfarbe */
+        position: absolute; /* Absolut positioniert */
+        top: -8%; /* Positioniert oben im Fenster */
+        padding-bottom: 10%;
+        left: 0; /* Auf der linken Seite ausrichten */
+        width: 100%; /* Breite auf 100% setzen */
+        z-index: 1; /* Damit der Header über allem anderen schwebt */
+    }
+    
+    .mobile-header .pagetitle-mobile {
+        margin: 0;
+        font-size: 1.5em;
+    }
+  
+    .mobile-links {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 0.5em;
+    }
+  
+    .mobile-links a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+  
+    .mobile-links a:hover {
+      color: var(--link-hov);
+    }
+
+
+    /* Links aus der Sidebar in die Tabs verschieben */
+ 
+
+    .tabs button {
+        background-color: var(--background-tabs);
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        border-right: 1px solid var(--sidebar);
+        font-family: var(--font-main);
+        color: var(--link-color);
+    }
+
+
+    /* Füge die Links der Sidebar hier hinzu */
+    .tabs button.sidebar-link {
+        border: none;
+        padding: 10px 15px;
+        text-align: center;
+        background-color: var(--background-tabs);
+        color: var(--link-color);
+        border-right: 1px solid var(--sidebar);
+    }
+
+    .tabs button.sidebar-link:last-child {
+        border-right: none; 
+    }
+
+    .tabs button.sidebar-link:hover {
+        color: var(--accent-green);
+    }
+  }
+
+  
+  /* --- Desktop-Ansicht --- */
+  @media screen and (min-width: 601px) {
+  
+    .sidebar {
+        height: 100%; /*Full-height: remove this if you want "auto" height */
+        width: 200px; /* Set the width of the sidebar */
+        background-color: var(--sidebar);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      
+      .pagetitle {
+        text-transform: lowercase;
+        padding: 5px 20px 50px;
+        font-size: 19pt;
+        text-align: left;
+      }
+      
+      .sidelinks {
+        margin-top: 50vh;
+      }
+      .sidelinks a {
+        display: block;
+        clear: both;
+        padding: 5px 10%;
+      }
+
+    /* Verstecke den mobilen Header auf Desktop */
+    .mobile-header {
+        display: none;
+    }
+
+    .tabs button.sidebar-link {
+        display: none;
+    }
+  }
+  
