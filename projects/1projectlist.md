@@ -1,5 +1,5 @@
 # To be programmed
-#### Things I on my To-Do List
+#### To-Do List
 
 - [x] Fully functional portfolio website with responsive design
 - [ ] Reading tracker app (that hits my aesthetical perfectionism)

@@ -8,23 +8,22 @@
 
 /*---------------------------------------------------------------------------------------*/
 /* Index */
-
-#page_buttons {
+.image-button {
   display: flex;
   flex-direction: column;
-  margin-top: 25%;
-  justify-content: right;
+  align-items: flex-end;
 }
 
 #indexbutton {
-  padding: 10px;
-  margin: 5px 0% 5px 55%;
+  padding: 15px;
   background-color: var(--background-tabs);
   border: none;
   border-radius: 10px;
   color: var(--accent-green);
   font-family: var(--font-main);
   font-size: 16px;
+  margin-top: 2%;
+  width: 35%;
 }
 
 #indexbutton:hover {
@@ -33,28 +32,31 @@
   cursor: pointer; 
 }
 
+#aboutimage {
+  width: 35%;
+  border-radius: 5px;
+  float: right;
+  transform: scaleX(-1);
+  opacity: 0.6;
+  filter: drop-shadow(-6px 6px 0px var(--accent-green));
+}
+
+#indexP {
+  display: flex;
+  float: left;
+}
 
 /*---------------------------------------------------------------------------------------*/
 /* About Page*/
 
-#aboutimage {
-  border-radius: 5px;
-  float: right;
-  margin-left: 30px;
-  transform: scaleX(-1);
-  opacity: 0.6;
-}
-
 .agentp {
-  float: left; /* Bild nach links ausrichten */
-  margin-right: 30px; /* Abstand zwischen Bild und Text */
-  margin-bottom: 10px; /* Abstand nach unten */
+  float: right; /* Bild nach links ausrichten */
   opacity: 0.8;
+  transform: scaleX(-1);
+  height: 180px;
+  width: auto;
 }
 
-.perryh2 {
-  color: var(--accent-green);
-}
 
 
 /*---------------------------------------------------------------------------------------*/
@@ -117,5 +119,5 @@ ul.checklist input[type="checkbox"] {
   letter-spacing: 0.4em;
   font-size: 14px;
   color: var(--link-hov);
-  text-align: right;
+  font-style: italic;
 }

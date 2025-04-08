@@ -1,0 +1,29 @@
+.typing-container {
+  font-family: var(--font-main);
+  color: var(--accent-green);
+  font-size: 1.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.static-text {
+  color: var(--title-color);
+  font-size: 1.5rem;
+}
+#typed-text::after {
+  content: "|";
+  animation: blink 1.0s infinite;
+  margin-left: 4px;
+  color: var(--text-light); 
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=animation.css.map */

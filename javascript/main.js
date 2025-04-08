@@ -23,6 +23,10 @@ function loadPage(page, element) {
             if (page.includes('dev_log_content.html')) {
                 loadBlogJS();
             }
+            // Typing Script nachladen
+            if (page.includes('index_content.html')) {
+                loadTypingJS();
+    }
         })
         .catch(error => console.error("Fehler beim Laden:", error));
 }
@@ -86,4 +90,13 @@ function loadBlogScript() {
     document.body.appendChild(script);
 }
 
+function loadTypingJS() {
+    const script = document.createElement("script");
+    script.src = "javascript/typinganimation.js";
+    script.onload = function () {
+        console.log("typinganimation.js geladen!");
+        typeLoop(); // <- Funktion in typinganimation.js
+    };
+    document.body.appendChild(script);
+}
 
