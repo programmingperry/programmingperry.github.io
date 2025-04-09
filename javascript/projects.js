@@ -6,7 +6,7 @@ async function loadMarkdownFiles() {
         return;
     }
 
-    projectContainer.innerHTML = ""; // Vorherigen Inhalt löschen
+    projectContainer.innerHTML = ""; 
 
     // Liste der Markdown-Dateien
     const markdownFiles = [
@@ -21,7 +21,7 @@ async function loadMarkdownFiles() {
             if (!response.ok) throw new Error(`Fehler beim Laden: ${file}`);
 
             const markdown = await response.text();
-            const html = marked.parse(markdown); // Markdown zu HTML umwandeln
+            const html = marked.parse(markdown); 
 
             const projectElement = document.createElement("div");
             projectElement.classList.add("project-item");

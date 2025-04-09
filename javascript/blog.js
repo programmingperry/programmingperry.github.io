@@ -6,7 +6,7 @@ async function loadBlogPosts() {
         return;
     }
 
-    blogContainer.innerHTML = ""; // Vorherigen Inhalt löschen
+    blogContainer.innerHTML = ""; 
 
     // Liste der Blogpost-Dateien
     const blogFiles = [
@@ -20,9 +20,8 @@ async function loadBlogPosts() {
             if (!response.ok) throw new Error(`Fehler beim Laden: ${file}`);
 
             const markdown = await response.text();
-            const html = marked.parse(markdown); // Markdown zu HTML umwandeln
+            const html = marked.parse(markdown); 
 
-            // Erstelle ein Blogpost-Element mit vollständigem Inhalt
             const blogElement = document.createElement("div");
             blogElement.classList.add("blog-item");
             blogElement.innerHTML = html;
@@ -34,5 +33,4 @@ async function loadBlogPosts() {
     }
 }
 
-// Lade die Blogposts beim Laden der Seite
 document.addEventListener("DOMContentLoaded", loadBlogPosts);

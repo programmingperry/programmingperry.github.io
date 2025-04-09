@@ -1,0 +1,237 @@
+/*---------------------------------------------------------------------------------------*/
+/* --- Mobilansicht --- */
+@media screen and (max-width: 750px) {
+
+  /* Hautinhalt */
+  body {
+    overflow-x: hidden;
+    margin: 1.5em 0;  
+    padding: 0; 
+    height: 95vh; 
+}
+
+  html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .window {
+    margin: 5vh auto; 
+    padding: 5vw; 
+    max-width: 95%;
+    width: 95%; 
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+
+  .main-content {
+    margin: 0.5em;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    overflow-x: hidden;
+    }
+
+
+  /*---------------------------------------------------------------------------------------*/
+  /* Sidebar Anpassung */
+  .sidebar,
+  .sidebar *,
+  .sidelinks {
+      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+  }
+
+  /* Page Header */
+  .mobile-header {
+    font-size: 22px;
+    text-align: center;
+    background-color: transparent; 
+    color: var(--h1-color); 
+    position: absolute;
+    top: 0.5em; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%;
+    z-index: 1; 
+    box-sizing: border-box; 
+  }
+  
+  .mobile-header .pagetitle-mobile {
+      font-size: 1.5em;
+      text-align: center;
+  }
+
+
+  /*---------------------------------------------------------------------------------------*/
+  /* Tabs Leiste */
+  .tabs {
+    display: flex;              
+    flex-wrap: wrap;           
+    justify-content: flex-start; 
+    gap: 0px;                 
+      
+  }
+
+  .tabs button {
+    background-color: var(--background-tabs);
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-right: 1px solid var(--sidebar);
+    font-family: var(--font-main);
+    color: var(--link-color);
+    font-size: 15px;
+    border-bottom: 1px solid var(--background-main);
+  }
+
+  .tabs button.sidebar-link {
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: var(--background-tabs);
+    color: var(--link-color);
+    border-right: 1px solid var(--sidebar);
+  }
+
+  .tabs button.sidebar-link:last-child {
+    border-right: none; 
+  }
+
+  .tabs button.sidebar-link:hover {
+    color: var(--accent-green);
+  }
+
+  .tabsymbols {
+    display: none;
+  }
+
+
+  /*---------------------------------------------------------------------------------------*/
+  /* Social Media Links Seitenende */
+  
+  .social-links {
+    display: flex;
+    justify-content: center;  
+    position: absolute;       
+    bottom: 1.5em;               
+    left: 50%;               
+    transform: translateX(-50%); 
+    z-index: 2;              
+    gap: 1em;               
+  }
+
+  .social-link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+  } 
+
+  .social-link i {
+    font-size:28px; 
+    color: var(--link-hov);
+  }
+
+  .social-link i:hover {
+    color: var(--accent-green);
+  }
+  .social-link:hover {
+    background-color: transparent; 
+  }
+
+
+  /*---------------------------------------------------------------------------------------*/
+  /* Anpassungen about.html */
+  .about-container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .about-text {
+      padding: 10px; 
+      text-align: justify; 
+  }
+    
+  .agentp {
+    float: left; 
+    margin-right: 30px; 
+    margin-bottom: 10px; 
+    width: 35%;
+    height: auto;
+  }
+
+  .blog-item, .project-item {
+    margin: 1em -0.5em;
+    padding: 0.5em 1.5em;
+  }
+
+  /*---------------------------------------------------------------------------------------*/
+  /* Layout index_content.html */
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #column-2 {
+    align-items: center;
+    width: 80%;
+    margin-top: 2.5em;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  #indexP {
+    text-align: justify;
+  }
+
+}
+
+/*---------------------------------------------------------------------------------------*/
+/* Desktop-Ansicht */
+@media screen and (min-width: 751px) {
+  .window {
+      width: 95%;
+    }
+    
+  .pagetitle {
+    text-transform: lowercase;
+    padding: 5px 20px 50px;
+    font-size: 19pt;
+    text-align: left;
+  }
+
+  .sidelinks a {
+    display: block;
+    clear: both;
+    padding: 5px 10%;
+  }
+
+  /* Mobile Anpassungen ausblenden */
+  .mobile-header {
+      display: none;
+  }
+  
+  .pagetitle-mobile {
+    display: none;
+  }
+
+  .tabs button.sidebar-link {
+      display: none;
+  }
+
+  .social-links {
+      display: none;
+  }
+}
+  

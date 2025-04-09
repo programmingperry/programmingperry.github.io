@@ -1,3 +1,6 @@
+/*---------------------------------------------------------------------------------------*/
+/* Typing Animation index_content.html*/
+
 .typing-container {
   font-family: var(--font-main);
   color: var(--accent-green);
@@ -26,4 +29,3 @@
   }
 }
 
-/*# sourceMappingURL=animation.css.map */

@@ -7,23 +7,19 @@ function loadPage(page, element) {
             return response.text();
         })
         .then(data => {
-            // Inhalte in #content einfügen
             document.getElementById("content").innerHTML = data;
 
-            // Aktiven Tab markieren
             document.querySelectorAll(".tablink").forEach(tab => tab.classList.remove("active-tab"));
             if (element) element.classList.add("active-tab");
 
-            // Wenn projects_content.html geladen wurde, lade und führe projects.js aus
             if (page.includes('projects_content.html')) {
-                loadProjectsJS();  // Lade das Script für projects.js
+                loadProjectsJS();  
             }
 
-            // Blog-Script laden, wenn Blog-Seite geöffnet wird
             if (page.includes('dev_log_content.html')) {
                 loadBlogJS();
             }
-            // Typing Script nachladen
+            
             if (page.includes('index_content.html')) {
                 loadTypingJS();
     }
@@ -32,18 +28,17 @@ function loadPage(page, element) {
 }
 
 function loadProjectsJS() {
-    // Prüfen, ob marked schon geladen wurde
     if (typeof marked === "undefined") {
         const markedScript = document.createElement("script");
         markedScript.src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js";
         markedScript.type = "text/javascript";
         markedScript.onload = function () {
             console.log("marked.js geladen!");
-            loadProjectsScript();  // Erst wenn marked.js fertig ist, dann projects.js laden
+            loadProjectsScript();  
         };
         document.body.appendChild(markedScript);
     } else {
-        loadProjectsScript(); // Falls marked schon existiert, direkt projects.js laden
+        loadProjectsScript(); 
     }
 }
 
@@ -53,7 +48,7 @@ function loadProjectsScript() {
     script.type = "text/javascript";
     script.onload = function () {
         console.log("projects.js geladen!");
-        loadMarkdownFiles(); // Markdown-Projekte laden
+        loadMarkdownFiles();
     };
     document.body.appendChild(script);
 }
@@ -61,7 +56,7 @@ function loadProjectsScript() {
 document.addEventListener("DOMContentLoaded", function () {
     const defaultTab = document.getElementById("defaultOpen");
     if (defaultTab) {
-        defaultTab.click(); // Simuliert einen Klick auf den Standard-Tab
+        defaultTab.click(); 
     } else {
         console.error("Fehler: Der Default-Tab (#defaultOpen) wurde nicht gefunden!");
     }
@@ -85,7 +80,7 @@ function loadBlogScript() {
     const script = document.createElement("script");
     script.src = "javascript/blog.js";
     script.onload = function() {
-        loadBlogPosts(); // Blogposts laden
+        loadBlogPosts(); 
     };
     document.body.appendChild(script);
 }
@@ -95,7 +90,7 @@ function loadTypingJS() {
     script.src = "javascript/typinganimation.js";
     script.onload = function () {
         console.log("typinganimation.js geladen!");
-        typeLoop(); // <- Funktion in typinganimation.js
+        typeLoop(); 
     };
     document.body.appendChild(script);
 }
