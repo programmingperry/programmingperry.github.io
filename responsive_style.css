@@ -141,6 +141,10 @@ html {
   .tabs button.sidebar-link:hover {
     color: var(--accent-green);
   }
+
+  .tabsymbols {
+    display: none;
+  }
   
   .social-links {
     display: flex;

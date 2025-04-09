@@ -154,6 +154,11 @@ a:hover, a:active {
   color: var(--accent-green);
 }
 
+#keyboar-img {
+  width: 4.5em;
+  margin-top: 0em;
+}
+
 
 /*---------------------------------------------------------------------------------------*/
 /* Hauptinhalt */
@@ -236,12 +241,32 @@ li {
   color: var(--link-hov);
 }
 
+.tabsymbols {
+  display: flex;
+  gap: 10px;
+  margin: auto; 
+  margin-right: 0;
+  padding-right: 15px; 
+}
+
+.tabsymbol {
+  color: var(--text);
+  font-size: 16px;
+  padding: 5px;
+  cursor: default;
+}
+
+.tabsymbol:hover {
+  color: var(--accent-green); 
+}
+
 /* Tab Inhalte */
 .tabcontent {
   display: block;
   padding: 40px;
   background-color: var(--background-main);
 }
+
 
 /*---------------------------------------------------------------------------------------*/
 /* Website Scrollbar*/
