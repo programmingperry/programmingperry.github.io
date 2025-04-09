@@ -30,7 +30,6 @@
 }
 
 
-
 /*---------------------------------------------------------------------------------------*/
 /* Hauptfenster */
 ::selection { 
@@ -247,11 +246,14 @@ li {
 }
 
 .tabsymbol {
-  color: var(--text);
+  color: var(--highlight);
   font-size: 16px;
   padding: 5px;
   cursor: default;
-  opacity: 0.6;
+  background: var(--background-main);
+  border-radius: 5px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Tab Inhalte */
