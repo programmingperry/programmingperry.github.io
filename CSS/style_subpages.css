@@ -109,3 +109,79 @@ ul.checklist input[type="checkbox"] {
   top: 0.1em;
   accent-color: var(--accent-green);
 }
+
+
+/*---------------------------------------------------------------------------------------*/
+/* CV Page */
+
+
+#cv-image {
+  width: 100%;
+  border-radius: 100%;
+  filter: drop-shadow(5px 5px 0px var(--accent-green));
+} 
+
+#cv-about-info {
+  font-family: var(--font-main);
+  color: var(--link-hov);
+}
+
+#cv-icons {
+  color: var(--text-light);
+}
+
+.cv-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 2em; 
+}
+
+.cv-column {
+  flex: 00 auto;
+}
+
+#cv-column-1 {
+  width: 50%;
+}
+
+#cv-about-text {
+  background-color: var(--background-tabs);
+  border-radius: 15px;
+  padding: 1em 2.5em;
+  margin: 1em 0 2em 0; 
+  line-height: 1.5;
+}
+
+#cv-currently {
+  background-color: var(--background-tabs);
+  border-radius: 15px;
+  padding: 1em 2.5em;
+  margin: 1em 0 2em 0; 
+  line-height: 1.5;
+}
+
+#cv-column-2 {
+  width: 50%;
+  background-color: var(--sidebar);
+  border-radius: 15px;
+  padding: 1em 2.5em;
+  margin: 1em 0 2em 0; 
+  line-height: 1.5;
+}
+
+.cv-list {
+  padding-left: 0px;
+}
+
+
+ul {
+  list-style-type: circle; 
+}
+
+li::marker {
+  font-size: 25px;
+  color: var(--accent-green)
+}
+
+

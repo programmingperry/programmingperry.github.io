@@ -8,15 +8,13 @@
         
     <title>programming perry</title>
     <link rel="icon" href="/assets/fav.png" type="image/png">
-    <!-- CSS und JS laden -->
+
     <link href="CSS/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="CSS/responsive_style.css" rel="stylesheet" type="text/css" media="all">
     <link href="CSS/animation.css" rel="stylesheet" type="text/css" media="all">
-
   </head>
-
   <body>
-  <!-- Mobiler Header (für kleine Bildschirme) -->
+  <!-- Mobiler Header -->
     <div class="mobile-header">
       <h1 class="pagetitle-mobile">Programming Perry</h1>
     </div>
@@ -38,7 +36,8 @@
         <!-- Menü Tabs -->
         <div class="tabs">
           <button class="tablink" onclick="loadPage('Unterseiten/index_content.html', this)" id="defaultOpen">Index</button>
-          <button class="tablink" onclick="loadPage('Unterseiten/about.html', this)">Perry</button>
+          <button class="tablink" onclick="loadPage('Unterseiten/about.html', this)">About</button>
+          <button class="tablink" onclick="loadPage('Unterseiten/perry.html', this)">Perry</button>
           <button class="tablink" onclick="loadPage('Unterseiten/projects_content.html', this)">Projects</button>
           <button class="tablink" onclick="loadPage('Unterseiten/dev_log_content.html', this)">Dev_Log</button>
           <div class="tabsymbols">
@@ -48,8 +47,7 @@
           </div>
         </div>
 
-        <!-- Tabs Inhalte-->
-        <!-- Hier wird der Inhalt geladen -->
+        <!-- Tabs Inhalte laden -->
         <div id="content" class="content">
           <p>Inhalt wird geladen...</p>
         </div>
