@@ -49,5 +49,6 @@ Check back for more projects, logs, and ideas.
 
 ## Connect With Me
 [GitHub](https://github.com/programmingperry)
+
 [LinkedIn](https://www.linkedin.com/in/nele-mccurrach-924947350/)
 
