@@ -1,7 +1,7 @@
 # Programming Perry
 
 Hi! I’m Nele – a former photographer turned aspiring programmer.  
-This project is my personal **portfolio & blog**, documenting my coding journey – from database queries to front-end experiments, and from logic loops to late-night bug hunts 🐞
+This project is my personal **portfolio & blog**, documenting my coding journey.
 
 Hosted with 💙 on GitHub Pages:  
 [programmingperry.github.io](https://programmingperry.github.io)
