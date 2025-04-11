@@ -6,8 +6,6 @@ This project is my personal **portfolio & blog**, documenting my coding journey.
 Hosted with 💙 on GitHub Pages:  
 [programmingperry.github.io](https://programmingperry.github.io)
 
----
-
 ## Built With
 
 - **HTML5** – semantic and structured
@@ -16,29 +14,29 @@ Hosted with 💙 on GitHub Pages:
 - **Font Awesome** – icons & playful design elements
 - **Hosted via GitHub Pages**
 
----
-
 ## Project Structure
+```
 ├── assets/                  # Images, icons, media
 ├── blogposts/               # Markdown Files for dev_log.html
 ├── CSS/                     # CSS files 
-    ├── style.css                # Global styles
-    ├── responsive_style.css     # Responsive styles mobile and desktop
-    ├── style_subpages.css       # Styling specific to subpages
-    └── animation.css            # Typing/text animations
+│   ├── style.css                # Global styles
+│   ├── responsive_style.css     # Responsive styles mobile and desktop
+│   ├── style_subpages.css       # Styling specific to subpages
+│   └── animation.css            # Typing/text animations
 ├── fonts/                   # Used fonts, downloaded from fonts.googlge.com
 ├── javascript/              # JS files
 │   ├── blog.js                  # Loads markdown blogposts to dev_log page
 │   ├── main.js                  # Handles page switching/tab logic
 │   ├── projects.js              # Loads markdown projects entries to projects page
 │   └── typinganimation.js       # Text animation on index_content.html
-├── projects/               # Markdown Files for projects.html
+├── projects/                # Markdown Files for projects.html
 ├── Unterseiten/             # HTML content loaded via JS
 │   ├── index_content.html
 │   ├── about.html
 │   ├── projects_content.html
 │   └── dev_log_content.html
 └── index.html               # Main layout with tab-based navigation
+```
 
 ## Features
 - Tab-based navigation: Seamless single-page feel with content switching via JavaScript.
