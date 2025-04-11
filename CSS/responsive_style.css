@@ -112,13 +112,24 @@
 
 
   /*---------------------------------------------------------------------------------------*/
-  /* Social Media Links Seitenende */
+  /* Seitenende */
   
+  .legallink {
+    display: flex;
+    justify-content: center;  
+    position: absolute;       
+    bottom: 0em;              
+    left: 50%;               
+    transform: translateX(-50%); 
+    z-index: 2;              
+    gap: 1em;     
+  }
+
   .social-links {
     display: flex;
     justify-content: center;  
     position: absolute;       
-    bottom: 1.5em;               
+    bottom: 3em;              
     left: 50%;               
     transform: translateX(-50%); 
     z-index: 2;              
@@ -149,15 +160,10 @@
 
   /*---------------------------------------------------------------------------------------*/
   /* Anpassungen about.html */
-  .about-container {
+  .perry-container {
       display: flex;
       flex-direction: column; 
       align-items: center; 
-  }
-
-  .about-text {
-      padding: 10px; 
-      text-align: justify; 
   }
     
   .agentp {
@@ -194,6 +200,39 @@
   #indexP {
     text-align: justify;
   }
+
+  .typing-container {
+    display: flex;              
+    flex-wrap: wrap;     
+  }
+
+  #typed-text {
+    padding-left: 0.5em;
+  }
+
+
+ /*---------------------------------------------------------------------------------------*/
+  /* Layout about.html */
+  .cv-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cv-column-1 {
+    align-items: center;
+    width: 100%;
+  }
+
+  #cv-column-2 {
+    align-items: center;
+    width: 80%;
+  }
+
+  .cv-column {
+    text-align: left;
+  }
+
 
 }
 

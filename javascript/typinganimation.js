@@ -1,4 +1,4 @@
-let words = ["developer",  "pixelpusher", "nerd", "designer", "dreamer", "bookworm", "bulletjournaler", "chaotic", "coder"];
+let words = ["developer",  "pixelpusher", "nerd", "designer", "dreamer", "bookworm", "coder"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

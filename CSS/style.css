@@ -14,6 +14,13 @@
     format('truetype'), 
   }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src:
+    url('/fonts/UbuntuMono-Regular.ttf')
+    format('truetype'),
+}
+
 :root {
   --background-main: #0b262e;
   --background-tabs: #19343b;
@@ -21,7 +28,7 @@
   --highlight: #2f464c;
   --text: #869496;
   --text-light: #d5dbdb;
-  --content-text: "Quicksand";
+  --content-text: "Ubuntu";
   --font-main: "Syne Mono";
   --link-color: #ddc094;
   --link-hov: #988835;
@@ -42,8 +49,8 @@ html, body {
 
 p {
   font-family: var(--content-text);
-  font-size: 17px;
-  line-height: 1.8em;
+  font-size: 18px;
+  line-height: 1.5em;
 }
 
 body {
