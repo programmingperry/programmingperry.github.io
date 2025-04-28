@@ -11,6 +11,7 @@ async function loadMarkdownFiles() {
     // Liste der Markdown-Dateien
     const markdownFiles = [
         "/projects/1projectlist.md",
+        "/projects/booktracker.md",
         "/projects/console_chess.md",
         "/projects/number_converter.md"
     ];
